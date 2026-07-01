@@ -1,8 +1,10 @@
 # 🎬 Cinelista
 
+> **Projeto desenvolvido durante o módulo 23 de Next.js da EBAC e organizado em um repositório próprio.**
+
 Aplicação desenvolvida com **Next.js** para listar filmes utilizando a API do **The Movie Database (TMDB)**.
 
-O projeto foi desenvolvido durante meus estudos de **Next.js** na EBAC e tem como objetivo praticar conceitos como App Router, rotas dinâmicas, consumo de APIs, Server Components e organização de projetos.
+O objetivo deste projeto é praticar conceitos como App Router, rotas dinâmicas, consumo de APIs, Server Components e organização de projetos.
 
 ## 🚀 Tecnologias
 
