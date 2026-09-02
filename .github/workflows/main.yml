@@ -1,0 +1,29 @@
+# Nome do workflow que vai aparecer no "Actions"
+name: Pipeline CI/CD
+run-name: ${{ github.actor }} is learning GitHub Actions
+# Definir quando o Pipeline será disparado
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch: # habilitar "run workflow" no GitHub Actions
+  
+jobs:
+  # Primeiro job: build
+  build:
+    runs-on: ubuntu-latest #Imagem da máquina usada no CI
+    
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v6
+        
+      - name: Instalação do Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Instalação das Dependências
+        run: npm install
+
+      - name: Rodar o Build
+        run: npm run build
