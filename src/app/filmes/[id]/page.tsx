@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./DetalheFilme.module.css";
 import { getMovieDetails } from "@/lib/api/tmdb";
-import { title } from "process";
+import Image from "next/image";
 
 type Props = {
     params: Promise<{
@@ -49,7 +49,7 @@ const { title, poster_path, overview } = detalhe
                 <Link href="/" className={styles.voltar}>Voltar</Link>
                 <section>
                     <figure>
-                        <img className={styles.image} src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`} alt={`Poster do filme ${title}`} />
+                        <Image className={styles.image} src={`${process.env.NEXT_PUBLIC_TMDB_API_IMG_URL}${poster_path}`} alt={`Poster do filme ${title}`} />
                     </figure>
                     <article className={styles.info}>
                     <h2>{title}</h2>
